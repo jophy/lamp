@@ -960,10 +960,10 @@ get_os_info(){
     local host=$( hostname )
     local kern=$( uname -r )
     local ramsum=$( expr $tram + $swap )
-    if [ ${ramsum} -lt 480 ]; then
-        echo "Error: Not enough memory to install LAMP. The system needs memory: ${tram}MB*RAM + ${swap}MB*Swap > 480MB"
-        exit 1
-    fi
+#    if [ ${ramsum} -lt 480 ]; then
+#        echo "Error: Not enough memory to install LAMP. The system needs memory: ${tram}MB*RAM + ${swap}MB*Swap > 480MB"
+#       exit 1
+#    fi
     [ ${ramsum} -lt 600 ] && disable_fileinfo="--disable-fileinfo" || disable_fileinfo=""
     
     echo "########## System Information ##########"
